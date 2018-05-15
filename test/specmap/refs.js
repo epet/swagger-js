@@ -406,7 +406,7 @@ describe('refs', function () {
       })
     })
 
-    it('should ignore $refs in freely named Swagger paths', function () {
+    it('should ignore properties with $refs in freely named Swagger nested positions', function () {
       return mapSpec({
         spec: {
           a: 1234,
@@ -423,6 +423,11 @@ describe('refs', function () {
             $ref: '#/a'
           },
           properties: {
+            properties: {
+              $ref: '#/a'
+            }
+          },
+          foo: {
             properties: {
               $ref: '#/a'
             }
@@ -445,6 +450,11 @@ describe('refs', function () {
             $ref: '#/a'
           },
           properties: {
+            properties: {
+              $ref: '#/a'
+            }
+          },
+          foo: {
             properties: {
               $ref: '#/a'
             }
