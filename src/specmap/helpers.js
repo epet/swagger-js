@@ -5,6 +5,7 @@ const freelyNamedPaths = [
   // Swagger 2.0
   'definitions',
   'parameters',
+  'properties',
   'responses',
   'securityDefinitions',
 
